@@ -1,0 +1,20 @@
+.Middle__Section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    margin: 0 auto;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    margin-bottom: 15px;
+}
+
+.Tariff__Check:checked + .Tariff__Label {
+    outline: 3px solid #c1e0fe;
+    outline: 3px solid rgba(131, 192, 253, 0.5);
+    outline-offset: 15px;
+}
+.Tariff__Check{
+    display: none;
+}
+.Tariff__Label{
+    cursor: pointer;
+}

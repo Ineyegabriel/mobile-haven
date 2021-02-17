@@ -1,0 +1,61 @@
+@import "../../Utils/scss/variables";
+@import '../../Utils/scss/mixins';
+
+.Capacity__Container {
+  margin: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.Capacity__Choice{
+  display: flex;
+  justify-content: center;
+}
+.Capacity__Select {
+  opacity: 0;
+  visibility: hidden;
+  margin-right: -13px;
+}
+.Capacity__Label {
+  font-size: large;
+  cursor: pointer;
+  border: 1px solid #000;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .Capacity__Label {
+    width: 100px;
+    height: 60px;
+  }
+}
+.Capacity__Select:checked + .Capacity__Label {
+  outline: 3px solid #c1e0fe;
+  outline: 3px solid rgba(131, 192, 253, 0.5);
+  outline-offset: 1px;
+}
+
+.Capacity__Option {
+  margin: 10px;
+  border-radius: 5px;
+}
+.beforeNafterBase{
+  content: "";
+  border: 1px solid red;
+  height: 114px;
+}
+.Out__Of--Stock:before {
+  @extend .beforeNafterBase;
+  position: absolute;
+  transform: rotate(59deg);
+}
+.Out__Of--Stock:after {
+  @extend .beforeNafterBase;
+  position: absolute;
+  transform: rotate(-59deg);
+}

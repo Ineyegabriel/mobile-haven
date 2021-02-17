@@ -1,0 +1,66 @@
+@import "../../Utils/scss/variables";
+@import "../../Utils/scss/mixins";
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.Card {
+  @include card-bases;
+  align-items: stretch;
+  width: 98%;
+}
+
+.Card__Image--Wrapper.Card__item {
+  padding: 5px;
+}
+
+.Card__Image {
+  height: $cardImageHeight;
+  max-width: $cardImageWidth;
+}
+.Card__item:nth-child(2) {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: flex-end;
+}
+.Card__Product--Plan {
+  color: $ActionColor;
+  text-align: end;
+ 
+  span {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background: $vodafoneRed;
+    margin-right: 10px;
+    border-radius: 14px;
+    margin-bottom: 5px;
+    ul {
+      @include reset-list;
+      li {
+        list-style: none;
+        &:nth-child(2) {
+          font-size: small;
+        }
+      }
+    }
+  }
+}
+.Card__Product--Name{
+  font-size: 1.1rem;
+  text-align: right;
+  padding-right: 10px;
+}
+.Card__Product--Price{
+  padding-right: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+}

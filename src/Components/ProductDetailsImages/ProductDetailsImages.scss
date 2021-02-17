@@ -1,0 +1,16 @@
+.ProductImage__Wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+  }
+.Product__Details--Image0 {
+  width: 330px;
+}
+.Product__Details--Image1,
+.Product__Details--Image2,
+.Product__Details--Image3 {
+  width: 224px;
+}
+ 
+

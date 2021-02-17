@@ -1,0 +1,38 @@
+@import "../../Utils/scss/mixins";
+@import "../../Utils/scss/variables";
+.Fieldset__Details {
+  b {
+    font-size: x-large;
+  }
+  p:nth-child(1) {
+    b {
+      font-size: xx-large;
+    }
+  }
+}
+.Bottom__Section--Wrapper{
+  margin-bottom: 5rem;
+}
+
+.Fieldset__Details {
+    position: relative;
+    padding: 5rem;
+}
+.Preview__Wrapper{
+ @include card-bases;
+ @include flex-centered;
+ flex-direction: column;
+ width: 300px;
+ padding: 2rem;
+  span{
+    width: 100%;
+    margin: 10px;
+  }
+}
+.Continue__Button{
+  border: none;
+  outline: none;
+
+}
+
+

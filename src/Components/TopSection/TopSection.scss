@@ -1,0 +1,71 @@
+@import "../../Utils/scss/mixins";
+@import "../../Utils/scss/variables";
+
+.Variant__Row {
+  @include flex-centered;
+  margin-top: -3rem;
+  h3 {
+    background-color: #21201e;
+    color: white;
+    padding: 2rem;
+    border-radius: 17px;
+    cursor: default;
+  }
+}
+.Variant__Color {
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+  &:focus,
+  &:visited {
+    border: 3px solid #fff;
+  }
+}
+.Variant__Color--Capacity {
+  @include flex-centered;
+  flex-direction: column;
+}
+
+.grid-item:nth-child(1) {
+  background: $vodafoneRed;
+  padding-bottom: 7rem;
+}
+.Variant__Summary {
+  @include flex-centered;
+  flex-direction: column;
+  padding: 2rem 5rem 2rem 5rem;
+  margin: {
+    top: 4rem;
+    bottom: 4rem;
+  }
+  h2 {
+    text-align: left;
+    width: 100%;
+    color: #fff;
+  }
+  background-color: #425b76;
+  background-image: linear-gradient(270deg, #86919d 0%, #425b76 100%);
+
+  &::after {
+    content: " ";
+    background: url("../../Assets/tariff-background.svg");
+    height: 12rem;
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    margin-bottom: -32px;
+    margin-top: -107px;
+  }
+}
+.Variant__Summary > p {
+  width: 100%;
+  z-index: 1;
+  color: azure;
+}

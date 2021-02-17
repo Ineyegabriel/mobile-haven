@@ -1,0 +1,31 @@
+@import "../../Utils/scss/mixins";
+@import "../../Utils/scss/variables";
+.Pagination {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: $paginationBgColor;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include flex-centered;
+  .List {
+    @include reset-list;
+    @include flex-centered;
+    .Item {
+      list-style: none;
+      .Button {
+        background: $paginationButtonColor;
+        border: none;
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+        &:active{
+            background: $vodafoneRed;
+            color: $ActionColor;
+        }
+      }
+    }
+  }
+}

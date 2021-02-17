@@ -1,0 +1,63 @@
+@import "../../Utils/scss/mixins";
+@import "../../Utils/scss/variables";
+
+.Tariff__Card {
+  @include card-bases;
+  flex-direction: column;
+  width: 300px;
+  cursor: pointer;
+}
+.Tariff__Plan--Name {
+  background-color: red;
+  color: #fff;
+  width: 100%;
+  padding: 3rem;
+  @include flex-centered;
+  flex-direction: column;
+
+  .Tariff__Extra {
+    font-size: small;
+  }
+}
+.Tariff__Plan--Data {
+  span {
+    font-size: x-large;
+  }
+}
+.Tariff__Price--Wrapper {
+    position: relative;
+    display: flex;
+    width: 89%;
+    margin-top: 16px;
+    background: #f7f3f3;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+    border-radius: 9px;
+}
+
+.Tariff__Price {
+  ul {
+    @include reset-list;
+    &:after {
+      content: "";
+      border: 1px solid #fff;
+      height: 100%;
+      top: 0;
+      position: absolute;
+      right: 50%;
+    }
+    li {
+      list-style: none;
+    }
+  }
+}
+.Tariff__Choice {
+  border: none;
+  width: 60%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  margin: 17px 0;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  background: $tariffButtonBgColor;
+  color: #fff;
+}
